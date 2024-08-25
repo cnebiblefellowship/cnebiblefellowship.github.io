@@ -1,0 +1,467 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>eBible Fellowship</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+<link rel="stylesheet" href="ebible.webflow.31cc17f4d.css">
+
+<link rel="stylesheet" href="nb.css">
+ <body class="body"></body>
+ 
+ <style>
+    /* 现有的样式保持不变 */
+  
+    .mobile-header {
+      display: none; /* 默认隐藏 */
+      height: 100px;
+      background-color: #00ffdd;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+  
+    .b2k4x1 {
+      display: inline-flex;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #007bff; /* 蓝色背景 */
+      color: #fff; /* 白色文字 */
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background-color 0.3s, color 0.3s;
+    }
+  
+    .b2k4x1:hover {
+      background-color: #0056b3; /* 深蓝色背景 */
+      color: #e6e6e6; /* 浅灰色文字 */
+    }
+  
+    .a7p3c9 i {
+      margin-right: 8px; /* 图标和文字之间的间距 */
+    }
+  
+    .sealed-scroll {
+      height: 60px; /* 调整图片大小 */
+      width: auto;
+      object-fit: contain;
+    }
+  
+    .home-button {
+      background-color: #ffffff;
+      color: #00ffdd;
+      padding: 8px 20px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s, color 0.3s;
+    }
+  
+    .home-button:hover {
+      background-color: #e6f2ff;
+    }
+  
+    .home-button i {
+      margin-right: 5px;
+    }
+  
+    /* 媒体查询：检测移动设备 */
+    @media screen and (max-width: 1023px) {
+      .mobile-header {
+        display: flex;
+      }
+  
+      .sidebar {
+        display: none; /* 隐藏侧边栏 */
+      }
+  
+      .banner, .blue-interface {
+        margin-left: 0; /* 移除左边距 */
+      }
+  
+      .content {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+    }
+  
+    .header-area {
+      text-align: center;
+      padding: 60px 20px; /* 增加上下内边距 */
+      background-color: #f0f8ff;
+    }
+  
+    .main-title {
+      font-size: 72px; /* 增大字体大小 */
+      color: #007bff;
+      margin-bottom: 50px; /* 增加与按钮的间距 */
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.1); /* 添加文字阴影 */
+    }
+  
+    .button-container {
+      display: flex;
+      justify-content: center;
+      gap: 30px; /* 增加按钮之间的间距 */
+    }
+  
+    .action-button {
+      padding: 15px 30px; /* 增加按钮的内边距 */
+      font-size: 24px; /* 增大按钮文字大小 */
+      border: none;
+      border-radius: 10px; /* 增加圆角 */
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* 添加阴影 */
+    }
+  
+    .action-button:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+    }
+  
+    .audio-button {
+      background-color: #36d7ff;
+      color: white;
+    }
+  
+    .audio-button:hover {
+      background-color: #45a049;
+    }
+  
+    .book-button {
+      background-color: #2196F3;
+      color: white;
+    }
+  
+    .book-button:hover {
+      background-color: #1e87db;
+    }
+  
+    .download-button {
+      background-color: #ff9800;
+      color: white;
+    }
+  
+    .download-button:hover {
+      background-color: #e68a00;
+    }
+  
+    .action-button i {
+      margin-right: 12px; /* 增加图标和文字的间距 */
+      font-size: 28px; /* 增大图标大小 */
+    }
+  
+    @media screen and (max-width: 1024px) {
+      .main-title {
+        font-size: 56px;
+      }
+  
+      .action-button {
+        font-size: 20px;
+        padding: 12px 24px;
+      }
+  
+      .action-button i {
+        font-size: 24px;
+      }
+    }
+  
+    @media screen and (max-width: 768px) {
+      .main-title {
+        font-size: 48px;
+      }
+  
+      .button-container {
+        flex-direction: column;
+        align-items: center;
+      }
+  
+      .action-button {
+        width: 80%;
+        max-width: 300px;
+        margin-bottom: 15px;
+      }
+    }
+  
+    .footer-text {
+      text-align: center;
+      margin-top: 20px;
+      color: #666;
+    }
+  </style>
+  </head>
+  <body>
+    <div class="mobile-header">
+      <p>利未记</p>
+      <a href="index.html" class="home-button">
+        <i class="fas fa-home"></i> 首页
+      </a>
+    </div>
+    
+    <!-- 其他现有的HTML内容 -->
+    
+    <div class="sidebar">
+      <img src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/62d89d87c1ef5c80d7431d14_EBF%20Logo.png" alt="eBible Fellowship Logo" class="logo">
+      <div class="title">
+        <span style="color: rgb(41, 152, 255);">e</span> Bible Fellowship
+      </div>
+      <div class="date">
+        自2011年5月21日选民生活在审判日里
+      </div>
+      
+      <!-- 按钮列表 -->
+      <button class="nav-button" onclick="location.href='index.html'">
+        <i class="fas fa-home"></i> 首页
+      </button>
+      <button class="nav-button" onclick="location.href='https://us02web.zoom.us/j/8721925979?pwd=aHpWQ0RBcCs2Um1NY1dXVFdrRDZOdz09'">
+        <i class="fas fa-search"></i> Zoom
+      </button>
+      <button class="nav-button" onclick="location.href='learnbible.html'">
+        <i class="fas fa-book-open"></i> 学习圣经
+      </button>
+      <button class="nav-button" onclick="location.href='https://newopenforum.org'">
+        <i class="fas fa-comments"></i> 圣经论坛
+      </button>
+      <button class="nav-button" onclick="location.href='books.html'">
+        <i class="fas fa-book"></i> 圣经书籍
+      </button>
+      
+      <!-- 直播室嵌入 -->
+      <div class="live-stream">
+        <iframe src="https://ebiblefellowshipcn.airtime.pro/embed/player?stream=auto&amp;skin=2" frameborder="0" width="200PX" height="300PX"></iframe>
+      </div>
+    
+      <!-- 平台图标 -->
+      <div class="platform-title">电子圣经团契平台</div>
+      <div class="icon-container">
+        <a href="#" class="icon-link"><i class="fab fa-spotify"></i></a>
+        <a href="#" class="icon-link"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="icon-link"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="icon-link"><i class="fab fa-x-twitter"></i></a>
+        <a href="#" class="icon-link"><i class="fab fa-tiktok"></i></a>
+        <a href="#" class="icon-link"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="icon-link"><i class="fab fa-linkedin"></i></a>
+        <a href="#" class="icon-link"><i class="fab fa-reddit"></i></a>
+        <!-- 添加其他图标... -->
+      </div>
+    
+      <!-- 联系我们按钮 -->
+      <button class="contact-button" onclick="location.href='mailto:Info@eBibleFellowship.org'">
+        <i class="fas fa-envelope"></i> 联系我们
+      </button>
+    
+      <!-- 地址按钮 -->
+      <button class="address-button" onclick="location.href='https://www.google.com/maps/place/E+Bible+FellowshipP.O.+Box+1393,+Sharon+Hill,+PA+19079-0593+USA'">
+        <i class="fas fa-map-marker-alt"></i> 地址
+      </button>
+    
+      <!-- 联系我们信息 -->
+      <div class="contact-info">
+        Info@eBibleFellowship.org
+      </div>
+    
+      <!-- 地址信息 -->
+      <div class="address">
+        E Bible Fellowship<br>
+        P.O. Box 1393, Sharon Hill, PA 19079-0593 USA
+      </div>
+    
+      <!-- 版权声明 -->
+      <div class="copyright">
+        &copy; 2024 eBible Fellowship
+      </div>
+    </div>
+    <div>
+      <a href="https://cnebiblefellowship-github-io.pages.dev/audio-index.html" class="b2k4x1 a7p3c9">
+          <i class="fas fa-arrow-left"></i> 返回
+      </a>
+      <div>
+  <div>
+      <h1>彼得前书</h1>
+  </div>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>eBible Fellowship</title>
+      <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+      <script src="https://kit.fontawesome.com/11efaeb501.js" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="nb.css">
+      <style>
+          .c7d8e2f1 {
+              width: 100%; /* Adjust the width to make it wider */
+              max-width: 300vh; /* Set a maximum width */
+              background-color: #fff;
+              border-radius: 10px;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+              overflow: hidden;
+              margin: 20px;
+          }
+          .g5h6i3j2 {
+              background-color: #b7daff;
+              padding: 15px;
+              color: #fff;
+              text-align: center;
+              font-size: 1.5em;
+              font-weight: bold;
+          }
+          .k9l0m4n3 {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding: 10px;
+              background-color: #e0e0e0;
+          }
+          .p1q2r4s6 {
+              background-color: #4CAF50;
+              border: none;
+              color: white;
+              padding: 10px;
+              margin: 0 10px;
+              cursor: pointer;
+              border-radius: 5px;
+              transition: background-color 0.3s;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+          }
+          .p1q2r4s6:hover {
+              background-color: #45a049;
+          }
+          .t7u8v1w0 {
+              font-size: 20px;
+              color: white; /* 图标颜色 */
+          }
+          .x2y3z5a6 {
+              flex: 1;
+              text-align: center;
+              font-size: 1.2em;
+          }
+          .b4c5d6e7 {
+              display: flex;
+              flex-direction: column;
+              height: auto; /* Allow height to grow with content */
+          }
+          #f8g9h1i2 {
+              width: 100%;
+              height: 50px;
+              background-color: #eee;
+          }
+          .j3k4l5m6 {
+              flex: 1;
+              padding: 10px;
+              background-color: #f9f9f9;
+              max-height: 300vh; /* Set a max-height for the playlist */
+              overflow-y: auto; /* Allow vertical scrolling if needed */
+          }
+          .n7o8p9q0 {
+              padding: 10px;
+              border-radius: 5px;
+              margin: 5px 0;
+              background-color: #e0e0e0;
+              cursor: pointer;
+              transition: background-color 0.3s;
+          }
+          .n7o8p9q0:hover {
+              background-color: #d0d0d0;
+          }
+          .bottom-controls {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #e0e0e0;
+        }
+        .bottom-btn {
+            background-color: #a0a0a0;
+            border: none;
+            color: white;
+            padding: 10px;
+            margin: 0 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .bottom-btn:hover {
+            background-color: #909090;
+        }
+      </style>
+  </head>
+  <body>
+  
+      <div class="c7d8e2f1">
+          <div class="g5h6i3j2">彼得前书频播放器</div>
+          <div class="k9l0m4n3">
+              <button id="prev-btn" class="p1q2r4s6"><i class="fa-light fa-forward t7u8v1w0"></i></button>
+              <span id="chapter-info" class="x2y3z5a6">彼得前书（Genesis）第1章（chapt 1）</span>
+              <button id="next-btn" class="p1q2r4s6"><i class="fa-solid fa-forward t7u8v1w0"></i></button>
+          </div>
+          <div class="b4c5d6e7">
+              <audio id="f8g9h1i2" controls></audio>
+              <div class="j3k4l5m6" id="playlist"></div>
+          </div>
+      </div>
+  
+      <script>
+          const audioPlayer = document.getElementById('f8g9h1i2');
+          const playlist = document.getElementById('playlist');
+          const chapterInfo = document.getElementById('chapter-info');
+          const prevBtn = document.getElementById('prev-btn');
+          const nextBtn = document.getElementById('next-btn');
+  
+          const chapters = Array.from({ length: 5 }, (_, i) => ({
+              title: `第${i + 1}章`,
+              url: `https://ebible2.pages.dev/60/${i + 1}.mp3`
+          }));
+  
+          let currentChapterIndex = 0;
+  
+          function loadChapter(index) {
+              if (index >= 0 && index < chapters.length) {
+                  currentChapterIndex = index;
+                  audioPlayer.src = chapters[index].url;
+                  audioPlayer.play();
+                  chapterInfo.textContent = `彼得前书 （Genesis）第${index + 1}章（chapt ${index + 1}）`;
+              }
+          }
+  
+          prevBtn.addEventListener('click', () => {
+              loadChapter(currentChapterIndex - 1);
+          });
+  
+          nextBtn.addEventListener('click', () => {
+              loadChapter(currentChapterIndex + 1);
+          });
+  
+          chapters.forEach((chapter, index) => {
+              const playlistItem = document.createElement('div');
+              playlistItem.className = 'n7o8p9q0';
+              playlistItem.textContent = chapter.title;
+              playlistItem.dataset.index = index;
+              playlistItem.addEventListener('click', () => {
+                  loadChapter(index);
+              });
+              playlist.appendChild(playlistItem);
+          });
+  
+          // Load the first chapter by default
+          loadChapter(0);
+      </script>
+<div class="bottom-controls">
+    <a id="prev-chapter" class="bottom-btn" href="book-of-james.html">上一章</a>
+    <a id="next-chapter" class="bottom-btn" href="book-of-2-peter.html">下一章</a>
+</div>
+
+
+    </div>
+  </body>
+<p>2024©️cn eBible Fellowship所有<p>
+  </html>
+  

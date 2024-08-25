@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EBF International</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            background-color: #91cdff; /* 淡蓝色背景 */
+            color: white;
+            height:200px;
+            padding: 10px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .header-title {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .languages {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .language-option {
+            cursor: pointer;
+            padding: 5px 10px;
+            margin-left: 10px;
+            border: 1px solid white;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .language-option:hover {
+            background-color: #007bff;
+        }
+
+        .verse {
+            font-style: italic;
+            margin: 20px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .languages {
+                position: static;
+                transform: none;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 class="header-title">EBF International</h1>
+        <div class="languages">
+            <span class="language-option">首页</span>
+            <!-- Add more language options as needed -->
+            <div class="verse">
+                "...这世界的国度成为我们主和他的基督的国度;他要作王，直到永远." 启示录 11:15
+            </div>
+        </div>
+    </div>
+
+    <span class="language-option">英语</span>
+    <span class="language-option">中文</span>
+    <span class="language-option">Sesotho</span>
+    <!-- Add more content as needed -->
+</body>
+</html>

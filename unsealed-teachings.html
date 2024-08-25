@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>eBible Fellowship</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+<link rel="stylesheet" href="nb.css">
+<body class="body"></body>
+ 
+<div class="mobile-header">
+     <h6>封印的书卷<h6>
+	<a href="https://cnebiblefellowship-github-io.pages.dev/" class="home-button">
+	  <i class="fas fa-home"></i> 首页
+	</a>
+  </div>
+  
+  <!-- 其他现有的HTML内容 -->
+  
+  <style>
+	/* 现有的样式保持不变 */
+  
+	.mobile-header {
+	  display: none; /* 默认隐藏 */
+	  height: 100px;
+	  background-color: #00ffdd;
+	  flex-direction: column;
+	  justify-content: space-between;
+	  align-items: center;
+	  padding: 10px;
+	  box-sizing: border-box;
+	}
+  
+	.sealed-scroll {
+	  height: 60px; /* 调整图片大小 */
+	  width: auto;
+	  object-fit: contain;
+	}
+  
+	.home-button {
+	  background-color: #ffffff;
+	  color: #00ffdd;
+	  padding: 8px 20px;
+	  border-radius: 20px;
+	  text-decoration: none;
+	  font-weight: bold;
+	  transition: background-color 0.3s, color 0.3s;
+	}
+  
+	.home-button:hover {
+	  background-color: #e6f2ff;
+	}
+  
+	.home-button i {
+	  margin-right: 5px;
+	}
+  
+	/* 媒体查询：检测移动设备 */
+	@media screen and (max-width: 1023px) {
+	  .mobile-header {
+		display: flex;
+	  }
+  
+	  .sidebar {
+		display: none; /* 隐藏侧边栏 */
+	  }
+  
+	  .banner, .blue-interface {
+		margin-left: 0; /* 移除左边距 */
+	  }
+  
+	  .content {
+		margin-left: 20px;
+		margin-right: 20px;
+	  }
+	}
+  </style>
+<div class="sidebar">
+	<img src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/62d89d87c1ef5c80d7431d14_EBF%20Logo.png" alt="eBible Fellowship Logo" class="logo">
+	<div class="title">
+	 
+	  <span style="color: rgb(41, 152, 255);">e</span> Bible Fellowship
+	</div>
+	<div class="date">
+	  自2011年5月21日选民生活在审判日里
+	</div>
+	
+	<!-- 按钮列表 -->
+	<button class="nav-button" onclick="location.href='https://cnebiblefellowship-github-io.pages.dev/'">
+	  <i class="fas fa-home"></i> 首页
+	</button>
+	<button class="nav-button" onclick="location.href='https://us02web.zoom.us/j/8721925979?pwd=aHpWQ0RBcCs2Um1NY1dXVFdrRDZOdz09'">
+	  <i class="fas fa-search"></i> Zoom
+	</button>
+	<button class="nav-button" onclick="location.href='https://cnebiblefellowship-github-io.pages.dev/learnbible.html'">
+	  <i class="fas fa-book-open"></i> 学习圣经
+	</button>
+	<button class="nav-button" onclick="location.href='https://newopenforum.org'">
+	  <i class="fas fa-comments"></i> 圣经论坛
+	</button>
+	<button class="nav-button" onclick="location.href='https://cnebiblefellowship-github-io.pages.dev/books.html'">
+	  <i class="fas fa-book"></i> 圣经书籍
+	</button>
+	<!-- 直播室嵌入 -->
+	<div class="live-stream">
+	  <iframe src="https://ebiblefellowshipcn.airtime.pro/embed/player?stream=auto&amp;skin=2" frameborder="0" width="200PX" height="300PX"></iframe>
+	</div>
+  
+	<!-- 平台图标 -->
+	<div class="platform-title">电子圣经团契平台</div>
+	<div class="icon-container">
+	  <a href="#" class="icon-link"><i class="fab fa-spotify"></i></a>
+	  <a href="#" class="icon-link"><i class="fab fa-youtube"></i></a>
+	  <a href="#" class="icon-link"><i class="fab fa-facebook"></i></a>
+	  <a href="#" class="icon-link"><i class="fab fa-x-twitter"></i></a>
+	  <a href="#" class="icon-link"><i class="fab fa-tiktok"></i></a>
+	  <a href="#" class="icon-link"><i class="fab fa-instagram"></i></a>
+	  <a href="#" class="icon-link"><i class="fab fa-linkedin"></i></a>
+	  <a href="#" class="icon-link"><i class="fab fa-reddit"></i></a>
+	  <!-- 添加其他图标... -->
+	</div>
+  
+	<!-- 联系我们按钮 -->
+	<button class="contact-button" onclick="location.href='mailto:Info@eBibleFellowship.org'">
+	  <i class="fas fa-envelope"></i> 联系我们
+	</button>
+  
+	<!-- 地址按钮 -->
+	<button class="address-button" onclick="location.href='https://www.google.com/maps/place/E+Bible+FellowshipP.O.+Box+1393,+Sharon+Hill,+PA+19079-0593+USA'">
+	  <i class="fas fa-map-marker-alt"></i> 地址
+	</button>
+  
+	<!-- 联系我们信息 -->
+	<div class="contact-info">
+	  Info@eBibleFellowship.org
+	</div>
+  
+	<!-- 地址信息 -->
+	<div class="address">
+	  E Bible Fellowship<br>
+	  P.O. Box 1393, Sharon Hill, PA 19079-0593 USA
+	</div>
+  
+	<!-- 版权声明 -->
+	<div class="copyright">
+	  &copy; 2024 eBible Fellowship
+	</div>
+  </div>
+  <div class="banner">未封印的教义</div>
+<style>
+  .banner {
+    width: 100%;
+    height: 60px;
+    background-color: #000; /* 你可以更改为任何你想要的颜色 */
+    color: #fff; /* 文字颜色 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px; /* 可以根据需要调整字体大小 */
+    font-weight: bold;
+  }
+  @media screen and (min-width: 1024px) {
+  body {
+    padding-left: 120px;
+  }
+
+
+  .content {
+    margin-left: 350px; /* 230px (原来的margin-left) + 120px */
+  }
+
+  .banner {
+    margin-left: 120px;
+  }
+}
+
+/* 确保在小屏幕设备上不应用这个偏移 */
+@media screen and (max-width: 1023px) {
+  body {
+    padding-left: 0;
+  }
+
+  .sidebar {
+    left: 0;
+  }
+
+  .content {
+    margin-left: 230px;
+  }
+
+  .banner {
+    margin-left: 0;
+  }
+}
+  .timeline-section,
+  .white-interface {
+    text-align: center;
+  }
+  
+  .title,
+  .subtitle,
+  .interactive-timeline,
+  .enter-interface-link {
+    margin: 0 auto;
+    max-width: 800px;
+  }
+  
+  .subtitle p {
+    text-align: center;
+  }
+  .b2k4x1 {
+      display: inline-flex;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #007bff; /* 蓝色背景 */
+      color: #fff; /* 白色文字 */
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background-color 0.3s, color 0.3s;
+    }
+  
+    .b2k4x1:hover {
+      background-color: #0056b3; /* 深蓝色背景 */
+      color: #e6e6e6; /* 浅灰色文字 */
+    }
+</style>
+<a href="https://cnebiblefellowship-github-io.pages.dev/" class="b2k4x1 a7p3c9">
+	<i class="fas fa-arrow-left"></i> 返回
+</a>
+<div>
+<div class="blue-interface">
+	<h1 class="white-title">什么是未封印的教义？</h1>
+  </div>
+  
+  <div class="content">
+	<p class="main-text">
+	  我们在但以理书 12：4 中读到： 但以理啊，你要闭上字眼，封存书卷，直到末世，必有许多人来来往往，知识必增长。
+	</p>
+	
+	<p class="main-text">
+	  上帝有许多重要的教义被封印，直到末世。只有这样，他才会开始解开他的话语，并向他的选民敞开这些教导。自1988年以来，我们一直生活在但以理书12：4所说的"末日"中。我们对这些教义的理解是否使我们与众不同？这些理解不是我们自己的智慧或智慧的结果，仅仅是因为这是上帝揭示这些事情的时机。耶稣是世上最伟大的老师，但我们发现在他的传道过程中，很少有人得救。彼得是耶稣的门徒之一，他在使徒行传第2章中讲道，大约有3000个灵魂得救。这并不是因为他的讲道比耶稣的教导更伟大，也不是因为他是一位更好的老师，当然不是，而是因为这是上帝浇灌圣灵的时机。同样，在最后，这是上帝解开这些教导的时机。
+	</p>
+	
+	<p class="main-text">
+	  在下面，你会看到一个由24个被解封的教义组成的时间表。
+	</p>
+  </div>
+  
+  <style>
+	.blue-interface {
+	  background-color: #007bff;
+	  height: 100px;
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  width: 100%;
+	}
+  
+	.white-title {
+	  color: white;
+	  font-size: 24px;
+	  text-align: center;
+	  margin: 0;
+	}
+  
+	.content {
+	  max-width: 800px;
+	  margin: 0 auto;
+	  padding: 20px;
+	}
+  
+	.main-text {
+	  font-size: 16px;
+	  line-height: 1.6;
+	  text-align: justify;
+	  margin-bottom: 20px;
+	}
+  
+	@media screen and (min-width: 1024px) {
+	  .blue-interface {
+		margin-left: 120px;
+		width: calc(100% - 120px);
+	  }
+	}
+  </style>
+<!-- 在时间线容器中，为每个事件添加id -->
+<div class="timeline-container">
+	<div class="timeline-box" id="event1">
+	  <h2 class="box-title">以色列成为一个国家</h2>
+	  <h3 class="box-subtitle">1948</h3>
+	  <p class="box-description">1948 年 5 月 14 日，以色列再次成为一个国家，这曾经被许多人认为是不可能的。圣经在马可福音 13：28 中预言了这一事件。</p>
+	</div>
+  
+	<div class="timeline-box" id="event2">
+	  <h2 class="box-title">发现圣经历史时间表</h2>
+	  <p class="box-description">在圣经中发现了圣经的时间线。这是我们所学到的许多教义的基础。发现了创世（公元前 11,013 年）、洪水（公元前 4990 年）、耶稣诞生（公元前 7 年）和地球年龄（13,000+ 年）等日期。</p>
+	</div>
+  
+	<div class="timeline-box" id="event3">
+	  <h2 class="box-title">基督的信仰</h2>
+	  <p class="box-description">长期以来，人们一直误解了这是谁的信仰。圣经表明这是基督的信仰，而不是我们自己的信仰。我们也不是靠自己的行为得救的，但圣经确实宣称信心是一种行为，所以我们的善行或遵守诫命，并不会导致救恩，而是救恩的结果，而救恩只是上帝赐予的。</p>
+	</div>
+  
+	<div class="timeline-box" id="event4">
+	  <h2 class="box-title">洗礼</h2>
+	  <p class="box-description">另一个经常被误解的教义是洗礼。像割礼一样，洗礼只是一个标志或影子，没有任何能力洗去罪恶。影子没有任何物质;这只是真实事物的反映。耶稣死在十字架上也表明了在创世时就已经发生的罪孽的代价。因此，十字架是已经发生的事情的影子。</p>
+	</div>
+  
+	<div class="timeline-box" id="event5">
+	  <h2 class="box-title">教会时代的终结</h2>
+	  <h3 class="box-subtitle">1988</h3>
+	  <p class="box-description">1988年5月21日标志着教会时代的结束。上帝最终给所有教会带来了审判，在他给了他们悔改的空间之后（1955年）。撒旦被允许在那里统治。神的圣灵离开了所有的教会，救恩就在那里停止了。</p>
+	</div>
+  
+	<div class="timeline-box" id="event6">
+	  <h2 class="box-title">大灾难</h2>
+	  <h3 class="box-subtitle">1988 - 2011</h3>
+	  <p class="box-description">大灾难持续了23年，从1988年5月21日开始，包括对教会的审判，这也是一个无与伦比的属灵欺骗的时期。它于2011年5月21日结束。</p>
+	</div>
+  
+	<div class="timeline-box" id="event7">
+	  <h2 class="box-title">大群人</h3>
+	  <h3 class="box-subtitle">后雨 1994 - 2011</h3>
+	  <p class="box-description">后雨始于1994年9月7日，结束于2011年5月21日。它持续了大约17年，是上帝拯救大量人的时候，在世界上每个国家都可以找到。在世界历史上，从来没有这么多人得救。</p>
+	</div>
+  
+	<div class="timeline-box" id="event8">
+	  <h2 class="box-title">HELL（湮灭）</h2>
+	  <p class="box-description">几个世纪以来，人们一直教导说，地狱是一个真正的折磨之地，未得救的人将永远燃烧。这是一个不正确的教导，我们错了。直到上帝开始解开他的话语，我们才了解到地狱的真正本质，地狱不是一个地方，而是地球的一个状况。地狱的意思是坟墓。未得救的人将在最后一天被消灭。</p>
+	</div>
+  
+	<div class="timeline-box" id="event9">
+	  <h2 class="box-title">从创世之初被杀的羔羊</h2>
+	  <p class="box-description">这是我们学到的主要教义之一。它给了我们更深刻的洞察力，并澄清了圣经中教导的许多事情，这些事情从未完全协调一致。基督从创世开始就死了，为罪付出了代价，正是在公元33年的十字架上，他展示了他已经做过的事。</p>
+	</div>
+  
+	<div class="timeline-box" id="event10">
+	  <h2 class="box-title">审判日</h2>
+	  <h3 class="box-subtitle">2011年5月21日</h3>
+	  <p class="box-description">2011 年 5 月 21 日是一个在世界范围内、全球范围内公布的日子。它出现在广告牌、大篷车、汽车、T 恤、长凳、保险杠贴纸、看台、主要新闻媒体上;它可以在广播和互联网上听到。这句话在全世界都得到了回响，只有一个信息：2011年5月21日是审判日！要理解接下来的每一条教义，首先必须理解并相信这个教义。因为它是以下教义的基础。</p>
+	</div>
+  
+	<div class="timeline-box" id="event11">
+	  <h2 class="box-title">属灵的审判</h2>
+	  <h3 class="box-subtitle">发布时间：2011 年 5 月 21 日</h3>
+	  <p class="box-description">生活在审判日已经揭示了它的本质。我们已经了解到，它本质上是属灵的，即使对教会的审判是属灵的或看不见的。属灵的审判对圣经来说是陌生的吗？</p>
+	</div>
+  
+	<div class="timeline-box" id="event12">
+	  <h2 class="box-title">不再有救赎</h3>
+	  <h3 class="box-subtitle">发布时间：2011 年 5 月 21 日</h3>
+	  <p class="box-description">没有怜悯的审判是圣经所教导的。2011年5月21日标志着救恩的结束。在2011年5月21日之前，神完成了祂的救赎计划，拯救了祂最后的选民。救恩不再发生。</p>
+	</div>
+  
+	<div class="timeline-box" id="event13">
+	  <h2 class="box-title">旷日持久的审判</h2>
+	  <h3 class="box-subtitle">发布时间：2011 年 5 月 21 日</h3>
+	  <p class="box-description">审判总是被认为是一天，但圣经真的教导过这一点吗？在圣经中，我们了解到另一天，称为“试探的日子”。（见希伯来书3：8-9）。我们知道这不是一天，而是 40 年的时间里，就像一天一样。</p>
+	</div>
+  
+	<div class="timeline-box" id="event14">
+	  <h2 class="box-title">炽热的试炼（地狱之火）</h2>
+	  <h3 class="box-subtitle">发布时间：2011 年 5 月 21 日</h3>
+	  <p class="box-description">也许自2011年5月21日以来，你已经感受到了一系列严峻的考验？你的生活感到更加艰难，发生了许多奇怪和严重的苦难？如果是这样，你并不孤单，神的选民已经经历了严峻的试炼，要试炼他们，并成为基督受苦的一份子。</p>
+	</div>
+  
+	<div class="timeline-box" id="event15">
+	  <h2 class="box-title">喂羊</h2>
+	  <h3 class="box-subtitle">发布时间：2011 年 5 月 21 日</h3>
+	  <p class="box-description">神的选民被呼召到世上去，在救恩日分享福音。这是伟大的使命。现在救恩已经完成，我们不再分享这个信息。我们现在被指派了另一个任务，那就是向世界分享我们一直在学习的这些新教义。</p>
+	</div>
+  
+	<div class="timeline-box" id="event16">
+	  <h2 class="box-title">上帝现在正在掌权！</h2>
+	  <h3 class="box-subtitle">发布时间：2011 年 5 月 21 日</h3>
+	  <p class="box-description">在伊甸园里，撒旦通过征服权征服了这个世界。他被赋予了对这个地球的统治权，这个世界成为了他的王国。然后，作为对教会的审判，他被允许在那里统治，因为上帝的灵离开了所有的教会。2011年5月21日，撒旦被废黜，并被逐出所有统治权。上帝现在正在掌权，因为他坐在他的宝座上，审判着世界。</p>
+	</div>
+  
+	<div class="timeline-box" id="event17">
+	  <h2 class="box-title">《没人知道》</h2>
+	  <h3 class="box-subtitle">发布时间：2011 年 5 月 21 日</h3>
+	  <p class="box-description">在2011年5月21日之前，教会和全世界都异口同声地宣布，“没有人知道基督再来的日子或时辰”。当时他们是对的，但原因却是错误的。“知道”并不等同于知识，而是经验。因此，换句话说，“没有人经历过这一天或那个小时”。现在，截至2011年5月21日，世界正在经历审判日，他们知道日子和时辰。</p>
+	</div>
+  
+	<div class="timeline-box" id="event18">
+	  <h2 class="box-title">在审判庭出庭</h2>
+	  <h3 class="box-subtitle">发布时间：2011 年 5 月 21 日</h3>
+	  <p class="box-description">正如我们不知道选民会经历大灾难一样，我们不知道上帝的选民也必须经历审判日。祂的子民在审判台前显现，因为神不尊重人，所以他审判义人与恶人。</p>
+	</div>
+  
+	<div class="timeline-box" id="event19">
+	  <h2 class="box-title">神的选民反映了基督的苦难</h2>
+	  <h3 class="box-subtitle">发布时间：2011 年 5 月 21 日</h3>
+	  <p class="box-description">正如基督在地上受苦一样，他的身体，包括地上所有被选民的人，也和他一样受苦。同样，正如耶稣复活并被宣布为神的儿子一样，选民也将经历对这个世界的审判，并在末日复活，并被宣布为“神的儿子”。</p>
+	</div>
+  
+	<div class="timeline-box" id="event20">
+	  <h2 class="box-title">2033</h2>
+	  <h3 class="box-subtitle">发布时间：2011 年 5 月 21 日</h3>
+	  <p class="box-description">越来越多的证据表明，对世界的审判的完成和这个世界的最终末日将在2033年。判决将持续 23 年（含 23 年）或实际 22 年。您可以通过导航到主页、向下滚动并单击“圣经时间线”来了解 2033 年的许多时间路径。</p>
+	</div>
+  
+	<div class="timeline-box" id="event21">
+	  <h2 class="box-title">绘图延迟</h2>
+	  <h3 class="box-subtitle">发布时间：2011 年 5 月 21 日</h3>
+	  <p class="box-description">上帝有没有拖延把你吸引到祂面前？尽管我们已经知道，截至2011年5月21日，救恩已经结束了，没有更多的人可以得救了，但我们确实知道上帝拯救了全球许多人，特别是在1994-2011年期间（见7）。这些新羊中的许多人可能对圣经知之甚少。我们在约翰福音 21：6 中读到，在大渔获之后，捕鱼的延迟，这代表着得救的许多人和网的安全。</p>
+	</div>
+  
+	<div class="timeline-box" id="event22">
+	  <h2 class="box-title">两次苦难</h2>
+	  <h3 class="box-subtitle">发布时间：2011 年 5 月 21 日</h3>
+	  <p class="box-description">我们了解到从1988年5月21日到2011年5月21日，持续了23年的大灾难时期。我们现在了解到，在审判日期间发生了第二次灾难，从2011年到2033年，也持续了23年（包括22年）。</p>
+	</div>
+  
+	<div class="timeline-box" id="event23">
+	  <h2 class="box-title">世界被公开羞辱</h2>
+	  <h3 class="box-subtitle">发布时间：2011 年 5 月 21 日</h3>
+	  <p class="box-description">我们已经了解到，作为对这个世界的审判的一部分，上帝打算公开和公开地羞辱世界的机构。无论我们今天在世界的哪个角度，我们都会发现巨大的动荡，因为只要受信任的政治制度不再被信任。曾经备受尊敬，甚至受人尊敬的新闻机构，现在已经不再受到尊重;但相反，他们被嘲弄地贴上了“假新闻”的标签。世界娱乐业被一个又一个丑闻严重动摇，给那些被曝光的人带来了巨大的羞辱。但它并没有就此结束。许多人习惯于通过转向体育作为一种避难所来逃避世界的麻烦，他们看到他们心爱的运动队和球员以及报道他们的媒体卷入了多重争议。甚至宗教也受到动荡的困扰，因为世界上最大的宗教之一的声誉一再被那些以它的名义从事恐怖主义行为的人玷污。</p>
+	</div>
+  
+	<div class="timeline-box" id="event24">
+	  <h2 class="box-title">为什么世界如此分裂？</h2>
+	  <h3 class="box-subtitle">发布时间：2011 年 5 月 21 日</h3>
+	  <p class="box-description">在世界范围内得到认可和谈论的一个主要话题是世界现在是如何如此分裂的。你有没有想过为什么会这样？上帝在他的话语《圣经》中宣布，到最后，在审判日，撒旦的王国（世界）将被分裂。我们现在看到的是这一切。上帝正在使世界上的居民彼此争战，作为对这个世界的审判的一部分。</p>
+	</div>
+  
+	<div class="timeline-box" id="event25">
+	  <h2 class="box-title">新天新地</h2>
+	  <h3 class="box-subtitle">发布时间：2011 年 5 月 21 日</h3>
+	  <p class="box-description">圣经告诉我们，在末后的日子，将会有一个新天新地的到来。这是神的选民最终的归宿，他们将在那里与神永远同住。</p>
+	</div>
+  </div>
+  
+
+
+	
+	<!-- 继续添加更多的 timeline-box，直到你有25个 -->
+  </div>
+  
+  <!-- 在 body 标签的末尾，在其他内容之后添加这个下拉菜单 -->
+  <div class="jump-menu">
+	<button class="jump-btn">跳转到事件 <i class="fas fa-caret-down"></i></button>
+	<div class="jump-content">
+		<a href="#">返回到首页</a>
+	  <a href="#event1">以色列成为一个国家</a>
+	  <a href="#event2">发现圣经历史时间表</a>
+	  <a href="#event3">基督的信仰</a>
+	  <a href="#event4">洗礼</a>
+	  <a href="#event5">教会时代的终结</a>
+	  <a href="#event6">大灾难</a>
+	  <a href="#event7">大群人</a>
+	  <a href="#event8">HELL（湮灭）</a>
+	  <a href="#event9">从创世之初被杀的羔羊</a>
+	  <a href="#event10">审判日</a>
+	  <a href="#event11">属灵的审判</a>
+	  <a href="#event12">不再有救赎</a>
+	  <a href="#event13">旷日持久的审判</a>
+	  <a href="#event14">炽热的试炼（地狱之火）</a>
+	  <a href="#event15">喂羊</a>
+	  <a href="#event16">上帝现在正在掌权！</a>
+	  <a href="#event17">《没人知道》</a>
+	  <a href="#event18">在审判庭出庭</a>
+	  <a href="#event19">神的选民反映了基督的苦难</a>
+	  <a href="#event20">2033</a>
+	  <a href="#event21">绘图延迟</a>
+	  <a href="#event22">两次苦难</a>
+	  <a href="#event23">世界被公开羞辱</a>
+	  <a href="#event24">为什么世界如此分裂？</a>
+	  <a href="#event25">新天新地</a>
+	</div>
+  </div>
+  
+  
+  <style>
+	/* 现有的样式保持不变 */
+  
+	.jump-menu {
+	  position: fixed;
+	  bottom: 20px;
+	  right: 20px;
+	  z-index: 1000;
+	}
+  
+	.jump-btn {
+	  background-color: #007bff;
+	  color: white;
+	  padding: 10px 20px;
+	  border: none;
+	  border-radius: 20px;
+	  cursor: pointer;
+	  font-size: 16px;
+	}
+  
+	.jump-content {
+	  display: none;
+	  position: absolute;
+	  background-color: #f9f9f9;
+	  min-width: 160px;
+	  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	  z-index: 1;
+	  bottom: 100%;
+	  right: 0;
+	  max-height: 300px;
+	  overflow-y: auto;
+	}
+  
+	.jump-content a {
+	  color: black;
+	  padding: 12px 16px;
+	  text-decoration: none;
+	  display: block;
+	}
+  
+	.jump-content a:hover {
+	  background-color: #f1f1f1;
+	}
+  
+	.jump-menu:hover .jump-content {
+	  display: block;
+	}
+  
+	@media screen and (max-width: 768px) {
+	  .jump-btn {
+		padding: 8px 16px;
+		font-size: 14px;
+	  }
+	}
+	.timeline-container {
+	  display: flex;
+	  flex-direction: column;
+	  align-items: center;
+	  gap: 40px;
+	  padding: 20px;
+	}
+  
+	.timeline-box {
+	  background-color: #007bff;
+	  border-radius: 10px;
+	  padding: 20px;
+	  width: 300px;
+	  color: white;
+	  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	  transition: transform 0.3s ease;
+	  position: relative;
+	}
+  
+	.timeline-box:hover {
+	  transform: translateY(-5px);
+	}
+  
+	.timeline-box::after {
+	  content: '';
+	  position: absolute;
+	  bottom: -30px;
+	  left: 50%;
+	  transform: translateX(-50%);
+	  width: 0;
+	  height: 0;
+	  border-left: 10px solid transparent;
+	  border-right: 10px solid transparent;
+	  border-top: 20px solid black;
+	}
+  
+	.timeline-box:last-child::after {
+	  display: none;
+	}
+  
+	.box-title {
+	  font-size: 20px;
+	  margin: 0 0 10px 0;
+	}
+  
+	.box-subtitle {
+	  font-size: 24px;
+	  margin: 0 0 15px 0;
+	}
+  
+	.box-description {
+	  font-size: 14px;
+	  line-height: 1.5;
+	  margin: 0;
+	}
+  
+	@media screen and (min-width: 1024px) {
+	  .timeline-container {
+		margin-left: 120px;
+	  }
+	}
+	/* 现有的样式保持不变 */
+
+	.jump-menu {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+
+  .jump-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .jump-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    bottom: 100%;
+    right: 0;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+
+  .jump-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .jump-content a:hover {
+    background-color: #f1f1f1;
+  }
+
+  .jump-menu:hover .jump-content {
+    display: block;
+  }
+
+  @media screen and (max-width: 768px) {
+    .jump-btn {
+      padding: 8px 16px;
+      font-size: 14px;
+    }
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  </style>
+  <script>
+	document.addEventListener('DOMContentLoaded', function() {
+	  var scrollLinks = document.querySelectorAll('.scroll-link');
+	  
+	  scrollLinks.forEach(function(link) {
+		link.addEventListener('click', function(e) {
+		  e.preventDefault();
+		  
+		  var targetId = this.getAttribute('href');
+		  var targetElement = document.querySelector(targetId);
+		  
+		  if (targetElement) {
+			var targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+			var startPosition = window.pageYOffset;
+			var distance = targetPosition - startPosition;
+			var duration = 2000; // 2 seconds
+			var start = null;
+			
+			function animation(currentTime) {
+			  if (start === null) start = currentTime;
+			  var timeElapsed = currentTime - start;
+			  var run = ease(timeElapsed, startPosition, distance, duration);
+			  window.scrollTo(0, run);
+			  if (timeElapsed < duration) requestAnimationFrame(animation);
+			}
+			
+			function ease(t, b, c, d) {
+			  t /= d / 2;
+			  if (t < 1) return c / 2 * t * t + b;
+			  t--;
+			  return -c / 2 * (t * (t - 2) - 1) + b;
+			}
+			
+			requestAnimationFrame(animation);
+		  }
+		});
+	  });
+	});
+	</script>

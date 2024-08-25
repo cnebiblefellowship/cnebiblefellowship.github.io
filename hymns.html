@@ -1,0 +1,826 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>eBible Fellowship</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+<link rel="stylesheet" href="ebible.webflow.31cc17f4d.css">
+
+<link rel="stylesheet" href="nb.css">
+ <body class="body"></body>
+ 
+ <style>
+    /* 现有的样式保持不变 */
+  
+    .mobile-header {
+      display: none; /* 默认隐藏 */
+      height: 100px;
+      background-color: #00ffdd;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+  
+    .b2k4x1 {
+      display: inline-flex;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #007bff; /* 蓝色背景 */
+      color: #fff; /* 白色文字 */
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background-color 0.3s, color 0.3s;
+    }
+  
+    .b2k4x1:hover {
+      background-color: #0056b3; /* 深蓝色背景 */
+      color: #e6e6e6; /* 浅灰色文字 */
+    }
+  
+    .a7p3c9 i {
+      margin-right: 8px; /* 图标和文字之间的间距 */
+    }
+  
+    .sealed-scroll {
+      height: 60px; /* 调整图片大小 */
+      width: auto;
+      object-fit: contain;
+    }
+  
+    .home-button {
+      background-color: #ffffff;
+      color: #00ffdd;
+      padding: 8px 20px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s, color 0.3s;
+    }
+  
+    .home-button:hover {
+      background-color: #e6f2ff;
+    }
+  
+    .home-button i {
+      margin-right: 5px;
+    }
+  
+    /* 媒体查询：检测移动设备 */
+    @media screen and (max-width: 1023px) {
+      .mobile-header {
+        display: flex;
+      }
+  
+      .sidebar {
+        display: none; /* 隐藏侧边栏 */
+      }
+  
+      .banner, .blue-interface {
+        margin-left: 0; /* 移除左边距 */
+      }
+  
+      .content {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+    }
+  
+    .header-area {
+      text-align: center;
+      padding: 60px 20px; /* 增加上下内边距 */
+      background-color: #f0f8ff;
+    }
+  
+    .main-title {
+      font-size: 72px; /* 增大字体大小 */
+      color: #007bff;
+      margin-bottom: 50px; /* 增加与按钮的间距 */
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.1); /* 添加文字阴影 */
+    }
+  
+    .button-container {
+      display: flex;
+      justify-content: center;
+      gap: 30px; /* 增加按钮之间的间距 */
+    }
+  
+    .action-button {
+      padding: 15px 30px; /* 增加按钮的内边距 */
+      font-size: 24px; /* 增大按钮文字大小 */
+      border: none;
+      border-radius: 10px; /* 增加圆角 */
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* 添加阴影 */
+    }
+  
+    .action-button:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+    }
+  
+    .audio-button {
+      background-color: #36d7ff;
+      color: white;
+    }
+  
+    .audio-button:hover {
+      background-color: #45a049;
+    }
+  
+    .book-button {
+      background-color: #2196F3;
+      color: white;
+    }
+  
+    .book-button:hover {
+      background-color: #1e87db;
+    }
+  
+    .download-button {
+      background-color: #ff9800;
+      color: white;
+    }
+  
+    .download-button:hover {
+      background-color: #e68a00;
+    }
+  
+    .action-button i {
+      margin-right: 12px; /* 增加图标和文字的间距 */
+      font-size: 28px; /* 增大图标大小 */
+    }
+  
+    @media screen and (max-width: 1024px) {
+      .main-title {
+        font-size: 56px;
+      }
+  
+      .action-button {
+        font-size: 20px;
+        padding: 12px 24px;
+      }
+  
+      .action-button i {
+        font-size: 24px;
+      }
+    }
+  
+    @media screen and (max-width: 768px) {
+      .main-title {
+        font-size: 48px;
+      }
+  
+      .button-container {
+        flex-direction: column;
+        align-items: center;
+      }
+  
+      .action-button {
+        width: 80%;
+        max-width: 300px;
+        margin-bottom: 15px;
+      }
+    }
+  
+    .footer-text {
+      text-align: center;
+      margin-top: 20px;
+      color: #666;
+    }
+  </style>
+  </head>
+  <body>
+    <div class="mobile-header">
+      <p>圣经音乐</p>
+      <a href="index.html" class="home-button">
+        <i class="fas fa-home"></i> 首页
+      </a>
+    </div>
+    <p>我们会定时更新音乐<p>
+    
+    <!-- 其他现有的HTML内容 -->
+    
+    <div class="sidebar">
+      <img src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/62d89d87c1ef5c80d7431d14_EBF%20Logo.png" alt="eBible Fellowship Logo" class="logo">
+      <div class="title">
+        <span style="color: rgb(41, 152, 255);">e</span> Bible Fellowship
+      </div>
+      <div class="date">
+        自2011年5月21日选民生活在审判日里
+      </div>
+      
+      <!-- 按钮列表 -->
+      <button class="nav-button" onclick="location.href='index.html'">
+        <i class="fas fa-home"></i> https://cnebiblefellowship-github-io.pages.dev/
+      </button>
+      <button class="nav-button" onclick="location.href='https://us02web.zoom.us/j/8721925979?pwd=aHpWQ0RBcCs2Um1NY1dXVFdrRDZOdz09'">
+        <i class="fas fa-search"></i> Zoom
+      </button>
+      <button class="nav-button" onclick="location.href='https://cnebiblefellowship-github-io.pages.dev/learnbible.html'">
+        <i class="fas fa-book-open"></i> 学习圣经
+      </button>
+      <button class="nav-button" onclick="location.href='https://newopenforum.org'">
+        <i class="fas fa-comments"></i> 圣经论坛
+      </button>
+      <button class="nav-button" onclick="location.href='https://cnebiblefellowship-github-io.pages.dev/books.html'">
+        <i class="fas fa-book"></i> 圣经书籍
+      </button>
+      
+      <!-- 直播室嵌入 -->
+      <div class="live-stream">
+        <iframe src="https://ebiblefellowshipcn.airtime.pro/embed/player?stream=auto&amp;skin=2" frameborder="0" width="200PX" height="300PX"></iframe>
+      </div>
+    
+      <!-- 平台图标 -->
+      <div class="platform-title">电子圣经团契平台</div>
+      <div class="icon-container">
+        <a href="#" class="icon-link"><i class="fab fa-spotify"></i></a>
+        <a href="#" class="icon-link"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="icon-link"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="icon-link"><i class="fab fa-x-twitter"></i></a>
+        <a href="#" class="icon-link"><i class="fab fa-tiktok"></i></a>
+        <a href="#" class="icon-link"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="icon-link"><i class="fab fa-linkedin"></i></a>
+        <a href="#" class="icon-link"><i class="fab fa-reddit"></i></a>
+        <!-- 添加其他图标... -->
+      </div>
+    
+      <!-- 联系我们按钮 -->
+      <button class="contact-button" onclick="location.href='mailto:Info@eBibleFellowship.org'">
+        <i class="fas fa-envelope"></i> 联系我们
+      </button>
+    
+      <!-- 地址按钮 -->
+      <button class="address-button" onclick="location.href='https://www.google.com/maps/place/E+Bible+FellowshipP.O.+Box+1393,+Sharon+Hill,+PA+19079-0593+USA'">
+        <i class="fas fa-map-marker-alt"></i> 地址
+      </button>
+    
+      <!-- 联系我们信息 -->
+      <div class="contact-info">
+        Info@eBibleFellowship.org
+      </div>
+    
+      <!-- 地址信息 -->
+      <div class="address">
+        E Bible Fellowship<br>
+        P.O. Box 1393, Sharon Hill, PA 19079-0593 USA
+      </div>
+    
+      <!-- 版权声明 -->
+      <div class="copyright">
+        &copy; 2024 eBible Fellowship
+      </div>
+    </div>
+    <div>
+    <a href="index.html" class="b2k4x1 a7p3c9">
+        <i class="fas fa-arrow-left"></i> 返回
+    </a>
+    <div>
+      <link rel="stylesheet" href="APlayer.css">
+      <style>
+          body {
+              font-family: Arial, sans-serif;
+              margin: 0;
+              padding: 0;
+              background-color: #f0f0f0;
+          }
+          .search-container {
+              text-align: right;
+              margin-bottom: 20px;
+          }
+          .search-container input {
+              padding: 10px;
+              font-size: 18px;
+              border-radius: 5px;
+              border: 1px solid #ccc;
+              width: 300px;
+          }
+          .aplayer {
+              margin-top: 20px;
+          }
+          .aplayer .aplayer-lyrics {
+              padding: 20px;
+              border-top: 1px solid #ddd;
+              font-size: 18px; /* Larger font size for lyrics */
+          }
+          .btn {
+              display: inline-block;
+              padding: 10px 20px;
+              margin: 10px 5px;
+              font-size: 18px;
+              color: #fff;
+              background-color: #007bff;
+              border: none;
+              border-radius: 5px;
+              cursor: pointer;
+              text-decoration: none;
+              text-align: center;
+          }
+          .btn:hover {
+              background-color: #0056b3;
+          }
+          .jicheng {
+            font-size: 30px;
+            font-weight:bold;
+          }
+      </style>
+  </head>
+  <body>
+    <link rel="stylesheet" href="ePlayer.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+</head>
+<h5 class="jicheng">赞美诗<h5>
+<body>
+    <div id="player-container">
+        <div class="eplayer-container" id="eplayer1"></div>
+        <div class="eplayer-container" id="eplayer2"></div>
+        <div class="eplayer-container" id="eplayer3"></div>
+        <div class="eplayer-container" id="eplayer4"></div>
+        <div class="eplayer-container" id="eplayer5"></div>
+        <div class="eplayer-container" id="eplayer6"></div>
+        <div class="eplayer-container" id="eplayer7"></div>
+        <div class="eplayer-container" id="eplayer8"></div>
+        <div class="eplayer-container" id="eplayer9"></div>
+        <div class="eplayer-container" id="eplayer10"></div>
+        <div class="eplayer-container" id="eplayer11"></div>
+        <div class="eplayer-container" id="eplayer12"></div>
+    </div>
+
+    <script src="ePlayer.js"></script>
+    <script>
+        const players = [
+            new ePlayer({
+                element: document.getElementById('eplayer1'),
+                music: {
+                    title: '在那边点名的时候',
+                    author: 'eBible Fellowship-Hymns',
+                    url: 's/10.mp3',
+                    cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
+                    lrc: `[00:00.00]在那边点名的时候
+[00:02.46]YouTube收录
+[00:04.83]eBible Fellowship-Hymns
+[00:10.05]主耶稣再临那日，必要高声吹起号筒
+[00:14.96]那永远光明清白华丽早晨
+[00:19.95]凡世上的就的人，必在那边一同会
+[00:24.56]在.那边点名，我亦必在其中
+[00:28.91]在那.边点名的时候
+[00:33.83]在那边.点名的时候
+[00:39.35]在那边点.名的时候
+[00:44.05]在那边点名我亦必在其中
+[00:49.03]凡信主而死的人，都比在那早晨复活
+[00:54.03]大荣耀光辉灿烂何等快乐！
+[00:58.96]蒙拣选德胜的人，都在天空一同相会
+[01:03.88]在那边点名.我亦必在其中
+[01:08.29]在那边点名的.时候
+[01:13.31]在那边点名的时.候
+[01:18.49]在那边点名的时候.
+[01:23.55]在那边点名我亦必在其中
+[01:28.19]我们应等待从早到晚为主殷勤做工
+[01:32.77]欢喜传扬主耶稣奇妙恩功
+[01:38.03]当世上路程跑尽，主派我的事已完成
+[01:43.13]在那边点名我.亦必在其中
+[01:47.90]在那边点名我亦.必在其中
+[01:52.78]在那边点名我亦必.在其中
+[01:57.87]在那边点名我亦必在其.中
+[02:02.78]在那边点名我亦必在其中.
+`
+                }
+            }),
+           new ePlayer({
+                element: document.getElementById('eplayer2'),
+                music: {
+                    title: '我宁愿有耶稣',
+                    author: 'eBible Fellowship-Hymns',
+                    url: 'Hymns/我宁愿有耶稣.mp3',
+                    cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
+                    lrc: `[00:00.00]我宁愿有耶稣
+[00:03.59]YouTube收录
+[00:10.35]eBible Fellowship-Hymns
+[00:20.33]我宁愿有耶稣，胜于金银，
+[00:29.80]我宁属耶稣，胜过财富无边；
+[00:39.26]我宁愿有耶稣，胜于地土，
+[00:48.70]愿主钉痕手引导我前途。
+[00:58.27]（副）胜过作君王，虽统治万方.，
+[01:07.74]却仍受罪恶捆绑；我宁愿有耶稣.
+[01:22.70]胜于世上荣华、富贵、声望.。
+[01:36.75]我宁愿有耶稣，胜于称扬，
+[01:46.29]我宁忠于主，满足主的心肠；
+[01:55.55]我宁愿有耶稣，胜于美名，
+[02:04.85]愿对主忠诚，宣扬主圣名。
+[02:14.21]（副）胜过作君王，虽统治万.方，
+[02:23.27]却仍受罪恶捆绑；我宁愿有耶.稣，
+[02:38.04]胜于世上荣华、富贵、声.望。
+[02:52.03]主比深谷百合高洁万倍
+[03:01.63]远比蜂房密更加芳香甘美
+[03:11.00]它满足我需要慰我心灵
+[03:19.41]我宁愿有主，跟随主前行
+[03:29.25][副]胜过做君王，虽统.治万方
+[03:38.51]却仍受罪恶.而捆绑
+[03:48.16]我宁愿有耶稣，胜于世上荣华，.富贵，声望
+[04:16.77]eBible Fellowship-Hymns
+`
+                }
+            }),
+            new ePlayer({
+                element: document.getElementById('eplayer3'),
+                music: {
+                    title: '贺他为王歌',
+                    author: 'eBible Fellowship-Hymns',
+                    url: 'Hymns/贺他为王.mp3',
+                    cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
+                    lrc: `[00:00.00]贺他为王歌
+[00:04.43]zanmei.ai收录
+[00:06.49]eBible Fellowship-Hymns
+[00:10.42]大哉！圣哉！耶稣之名！
+[00:18.38]天上万军颂扬，天上万军颂扬
+[00:28.06]奉献冠冕，极其光荣。
+[00:35.72]庆贺他！贺他！贺他！.
+[00:44.14]贺他！庆贺他为君王！.
+[00:55.56]天上地下闻主尊名
+[01:02.92]应该敬畏颂扬，应该敬畏颂扬
+[01:12.81]万膝跪拜，万口归荣。
+[01:20.10]庆贺他！贺他！贺他！
+[01:27.98]贺他！庆贺他为君王！
+[01:40.66]尊贵、荣耀、智慧、能力，
+[01:47.88]都归被杀羔羊，都归被杀羔羊，
+[01:57.84]圣徒天使赞美不息。
+[02:05.79]庆贺他！贺他！贺他！
+[02:14.30]贺他！庆贺他为君王！`
+                }
+            }),
+            new ePlayer({
+                element: document.getElementById('eplayer4'),
+                music: {
+                  title: '你坐着为王',
+                  author: 'eBible Fellowship-Hymns',
+                    url: 'Hymns/你坐着为王.mp3',
+                    cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
+                    lrc: `[00:00.00]你坐着为王
+[00:03.79]zanmei.ai收录
+[00:09.41]eBible Fellowship-Hymns
+[00:39.28]主耶和华 满有怜悯和恩典
+[00:45.88]我投靠在祢翅膀荫下
+[00:51.85]当我回转 一宿虽然有哭泣
+[00:58.06]早晨必欢呼喜乐
+[01:03.97]祢坐着为王 到永永远远
+[01:10.05]虽洪水翻腾 我坚定仰望祢
+[01:16.43]祢坐着为王 垂听我呼求
+[01:22.68]使我灵苏醒 有复活的生命
+[01:28.87]主耶和华 满有怜悯和恩.典
+[01:34.96]我投靠在祢翅膀荫下.
+[01:40.96]当我回转 一宿虽然有哭泣.
+[01:47.12]早晨必欢呼喜乐.
+[01:53.04]祢坐着为王 到永永远远.
+[01:59.38]虽洪水翻腾 我坚定仰望祢.
+[02:05.50]祢坐着为王 垂听我呼求.
+[02:12.31]使我灵苏醒 有复活的生命
+[02:17.98]旁白：今天，无论这个世界是多么的动荡，
+[02:22.14]你的环境是多么的无奈，
+[02:24.78]你要继续来仰望神，
+[02:28.47]因为祂仍坐在宝座上
+[02:31.20]祂拥有你生命的答案，
+[02:33.45]祂也拥有这世界的答案，
+[02:37.00]祂正坐在宝座，垂听你的呼求……
+[02:42.56]祢坐着为王 到永永远远
+[02:48.56]虽洪水翻腾 我坚定仰望祢
+[02:54.78]祢坐着为王 垂听我呼求
+[03:01.16]使我灵苏醒 有复活的生命
+[03:07.05]祢坐着为王 到永永远远
+[03:13.14]虽洪水翻腾 我坚定仰望祢
+[03:19.22]祢坐着为王 垂听我呼求
+[03:25.78]使我灵苏醒 有复活的生命
+[03:31.53]祢坐着为王 垂听我呼求
+[03:37.77]使我灵苏醒 有复活的生命
+[03:44.41]使我灵苏醒 有复活的生命
+[03:52.19]eBible Fellowship -Hymns
+
+`
+                }
+            }),
+            new ePlayer({
+                element: document.getElementById('eplayer5'),
+                music: {
+                    title: '有福确据歌',
+                    author: 'eBible Fellowship-Hymns',
+                    url: 'Hymns/有福确据歌 .mp3',
+                    cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
+                    lrc: `[00:00.00]有福确据歌
+[00:04.50]zanmei.ai收录
+[00:06.49]eBible Fellowship-Hymns
+[00:08.19]1.有福的确据，耶稣属我
+[00:13.80]何等的荣耀向我显明
+[00:19.84]被救主赎回，为神后嗣
+[00:25.60]藉宝血洗罪，圣灵重生
+[00:31.68]Chorus 这是我信息，或讲或唱.
+[00:37.45]赞美我救主，心里欢畅 .
+[00:43.36]常讲主慈爱，并颂主恩.
+[00:49.08]赞美我救主，昼夜不分.
+[00:55.09]2.完全顺服主，我灵欢喜
+[01:00.87]天堂的荣耀显于我心
+[01:06.56]仿佛有天使由天降临
+[01:12.65]报明主慈爱，并主怜悯
+[01:18.59]Chorus 这是我信息，或讲.或唱
+[01:24.41]赞美我救主，心里.欢畅
+[01:30.28]常讲主慈爱，并颂.主恩
+[01:36.06]赞美我救主，昼夜.不分
+[01:41.91]3.完全献与主，万.事安宁
+[01:47.69]荣耀的圣灵充.满我心
+[01:53.66]时刻仰望主，儆.醒等候
+[01:59.56]不住地祈祷，到.主来临
+[02:05.54]Chorus 这是我信息，或讲或唱
+[02:11.12]赞美我救主，心里欢畅
+[02:17.06]常讲主慈爱，并颂主恩
+[02:22.87]赞美我救主，昼夜不分
+[02:30.97]阿们
+[02:36.32]eBible Fellowship-Hymns`
+                }
+            }),
+            new ePlayer({
+                element: document.getElementById('eplayer6'),
+                music: {
+                    title: '安居主怀歌',
+                    author: 'eBible Fellowship-Hymns',
+                    url: 'Hymns/安居主怀歌.mp3',
+                    cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
+                    lrc: `[00:00.00]安居主怀歌
+[00:03.63]YouTube收录
+[00:05.66]eBible Fellowship-Hymns
+[00:21.57]安稳在耶稣手中，安稳在主怀内，
+[00:31.36]因主慈爱常覆翼，我心必得安慰。
+[00:41.39]听啊！天使美妙声，传来颂歌嘹亮 .
+[00:51.25]越过那荣耀福地，传来颂歌嘹亮。
+[01:01.12]安稳在耶稣手中，安稳在主怀内，.
+[01:10.88]因主慈爱常覆翼，我心必得安慰。.
+[01:21.23]安稳在耶稣手中，我灵不致朽坏，
+[01:30.93]，免受那世俗诱惑，免遭罪恶伤害
+[01:40.99]脱离疑惑和恐惧，脱离诸般忧戚，
+[01:50.83]惟余下少许试炼，眼泪惟余几滴。
+[02:00.80]安稳在耶稣手中，安稳在主怀内，
+[02:10.41]因主慈爱常覆翼， 我心必得安慰。
+[02:40.72]安稳在耶稣手中，耶稣已为我死，
+[02:50.50]主真是万古磐石，我必永远靠此。
+[03:00.48]我们当忍耐等候，经过夜间黑暗，
+[03:10.52]直到见清晨日光，照在荣华金岸。
+[03:20.46]安稳在耶稣手中，安稳在主.怀内，
+[03:30.18]因主慈爱常覆翼，我心必得.安慰。
+[03:37.23]eBible Fellowship-Hymns`
+                }
+            }),
+            new ePlayer({
+                element: document.getElementById('eplayer7'),
+                music: {
+                    title: '唯独耶稣歌',
+                    author: 'eBible Fellowship-Hymns',
+                    url: 'Hymns/惟独耶稣歌.mp3',
+                    cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
+                    lrc: `[00:00.00]唯独耶稣歌
+[00:05.74]zanmei.ai收录
+[00:12.17]eBible Fellowship-Hymns
+[00:14.62]1.惟独耶稣是我信息，
+[00:19.65]我所讲论就是耶稣；
+[00:24.39]永远高举耶稣基督，
+[00:28.64]我所仰望就是耶稣。
+[00:33.43]惟独耶稣，永远耶稣，
+[00:38.07]我心赞美，我口传扬，
+[00:42.86]救我医我，使我成圣，
+[00:47.11]荣耀救主，再来之王。
+[00:57.54]2.惟独耶稣是我救主，
+[01:02.03]一切罪愆为我担负；
+[01:06.71]我得称义全靠耶稣，
+[01:11.22]赐我力量日日事主。
+[01:16.03]惟独耶稣，永远耶稣，.
+[01:20.18]我心赞美，我口传扬，.
+[01:25.07]救我医我，使我成圣，.
+[01:29.64]荣耀救主，再来之王。 .
+[01:39.70]3.惟独耶稣使我成圣，
+[01:44.58]除我旧人，诸罪洗清；
+[01:49.22]真理圣灵充满我心，
+[01:54.07]表彰基督丰富生命。
+[01:59.02]惟独耶稣，永远耶.稣，
+[02:03.62]我心赞美，我口传.扬，
+[02:07.98]救我医我，使我成.圣，
+[02:12.82]荣耀救主，再来之.王。
+[02:22.80]4.惟独耶稣再临君王，
+[02:28.24]等候主来号筒之声；
+[02:32.92]接我升天，荣耀盼望，
+[02:37.60]惟独耶稣永生真神。
+[02:42.56]惟独耶稣，永远.耶稣，
+[02:47.21]我心赞美，我口.传扬，
+[02:51.94]救我医我，使我成圣，
+[02:56.72]荣耀救主，再来之王。
+[03:03.84]eBible Fellowship-Hymns
+`
+                }
+            }),
+            new ePlayer({
+                element: document.getElementById('eplayer8'),
+                music: {
+                    title: '主不改变歌',
+                    author: 'eBible Fellowship -Hymns',
+                    url: 'Hymns/主不改变歌.mp4',
+                    cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
+                    lrc: `
+[00:00.98]主不改变歌
+[00:02.07]YouTube收录
+[00:07.63]eBible Fellowship -Hymns
+[00:10.16]1、昨日、今日、直到永远，主话永不变，
+[00:20.38]我主所言无论何语，句句必应验；
+[00:30.22]罪人得救，病人得愈，身心都安宁；
+[00:40.24]转悲为喜，惊慌得安，荣耀归主名！
+[00:50.52]（副歌）虽然宇宙世界万物逐渐都改变，.
+[01:00.33]惟有耶稣永不改变，荣耀归主名！ .
+[01:10.43]荣耀归主名！荣耀归主名！.
+[01:20.41]惟有耶稣永不改变，荣耀归主名！.
+[01:30.41]2、我主乃是罪人朋友，特来施拯救
+[01:40.37]大家就近恩主脚前，忏悔谦卑求
+[01:50.45]救主慈言：罪莫再犯，你罪皆赦免。
+[02:00.95]自昔至今，永永远远，主恩不改变。
+[02:10.39]（副歌）虽然宇宙世界万物逐渐都改变..
+[02:20.37]惟有耶稣永不改变，荣耀归主名！..
+[02:30.49]荣耀归主名！荣耀归主名！..
+[02:40.48]惟有耶稣永不改变，荣耀归主名！..
+[02:50.43]3、昔日，主往以马忤斯，与门徒同路；
+[03:00.08]我们度日也当如此，有主在一处。
+[03:10.30]基督耶稣如何升天，他还要再来，
+[03:20.17]我们快要见主荣面，永与主同在。
+[03:30.36]（副歌）虽然宇宙世界万物逐渐都改变，...
+[03:40.72]惟有耶稣永不改变，荣耀归主名！...
+[03:50.43]荣耀归主名！荣耀归主名！...
+[04:00.37]惟有耶稣永不改变，荣耀归主名！
+[04:09.90]eBible Fellowship- Hymns`
+                }
+            }),
+            new ePlayer({
+                element: document.getElementById('eplayer9'),
+                music: {
+                    title: '恩友歌',
+                    author: 'eBible Fellowship -Hymns',
+                    url: 'Hymns/恩友歌.mp4',
+                    cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
+                    lrc: `[00:00.00]恩友歌
+[00:06.77]youtube收录
+[00:10.04]eBible Fellowship-Hymns
+[00:16.92]1、何等恩友慈仁救主，负我罪孽担我忧；
+[00:30.15]何等权利能将万事，来到耶稣座前求！
+[00:43.40]多少平安我们坐失，多少痛苦冤枉受，.
+[00:56.76]都是因为未将万事，来到耶稣座前求。.
+[01:10.00]2、我们有无试探引诱？有无难过苦关头？
+[01:23.03]决不应当因此灰心，仍当到主座前求！
+[01:36.55]何处能寻这般良友，同尝一切苦与愁？
+[01:49.54]我们弱点主都知道，放心到主座前求。
+[02:03.00]3、我们是否软弱多愁，千斤重担压肩头？
+[02:16.00]主仍做我避难处所，奔向耶稣座前求！
+[02:29.35]你若真逢友叛亲离，好向耶稣座前求！
+[02:42.76]到祂怀中祂必保护，有祂安慰便无忧。
+[02:55.46]eBible Fellowship-Hymns.
+
+`
+                }
+            }),
+            new ePlayer({
+                element: document.getElementById('eplayer10'),
+                music: {
+                    title: '天父世界歌',
+                    author: 'eBible Fellowship -Hymns',
+                    url: 'Hymns/天父世界.mp4',
+                    cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
+                    lrc: `[00:00.00]天父世界歌
+[00:05.05]YouTube收录
+[00:11.41]eBible Fellowship -Hymns
+[00:23.97]1.这是天父世界
+[00:28.77]孩童侧耳要听
+[00:34.05]宇宙唱歌四围响应
+[00:39.15]星辰作乐同声
+[00:44.67]这是天父世界
+[00:49.65]我心满有安宁
+[00:54.74]树木花草 苍天碧海
+[00:59.86]述说天父全能
+[01:05.32]2.这是天父世界
+[01:10.39]小鸟长翅飞鸣
+[01:15.68]清晨明亮 好花美丽
+[01:20.85]证明天理精深
+[01:26.21]这是天父世界
+[01:31.36]他爱普及万千
+[01:36.43]风吹之草 将他表现
+[01:41.84]天父充满世间
+[02:07.97]3.这是天父世界
+[02:13.09]求主叫我不忘
+[02:18.32]罪恶虽然好像得胜
+[02:23.41]天父却仍掌管
+[02:28.83]这是天父世界
+[02:33.98]我心不必忧伤
+[02:39.21]上帝是王 天地同唱
+[02:44.46]歌声充满万方
+[02:49.88]这是天父世界
+[02:54.86]我心不必忧伤.
+[02:59.98]上帝是王 天地同唱.
+[03:05.23]歌声充满万方
+[03:10.61]上帝是王 天地同唱.
+[03:15.69]歌声充满万方
+[03:23.61]eBible Fellowship -Hymns
+
+`
+                }
+            }),
+            new ePlayer({
+                element: document.getElementById('eplayer11'),
+                music: {
+                    title: '主啊我赞美你',
+                    author: 'eBible Fellowship -Hymns',
+                    url: 'Hymns/主啊我赞美你.mp4',
+                    cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
+                    lrc: `[00:00.00]主啊我赞美你
+[00:02.76]YouTube收录
+[00:07.42]eBible Fellowship -Hymns
+[00:26.53]主啊，我赞美你！
+[00:32.61]因为你拣选了我
+[00:38.79]在这茫茫的人海中
+[00:44.87]是你把我找寻
+[00:50.97]主啊，我赞美你
+[00:57.33]因为你爱了我
+[01:03.39]你的爱充满整个宇宙
+[01:09.30]充满整个山河
+[01:18.77]你的爱曾拯救多少人
+[01:24.90]你的爱曾激励我们去生活
+[01:30.97]谁不向你屈身下拜？
+[01:37.09]谁不向你高唱赞歌！
+[01:43.37]我们伟大的神啊
+[01:49.31]我们伟大的上帝！
+[01:55.54]是你把我们从尘土中高举
+[02:01.77]把我们从尘土中高举
+[02:07.84]说不尽你的慈爱
+[02:14.03]唱不尽你的公义
+[02:20.18]在这广阔的大地上
+[02:26.37]谁不感激赞美你！
+[02:39.40]主啊，我赞美你！
+[02:44.89]因为你拣选了我
+[02:51.16]在这茫茫的人海中
+[02:57.33]是你把我找寻
+[03:03.32]主啊，我赞美你
+[03:09.51]因为你爱了我
+[03:15.68]你的爱充满整个宇宙
+[03:21.70]充满整个山河
+[03:28.29]你的爱曾拯救多少人
+[03:34.08]你的爱曾激励我们去生活
+[03:40.17]谁不向你屈身下拜？
+[03:46.26]谁不向你高唱赞歌！
+[03:52.84]我们伟大的神啊
+[03:58.70]我们伟大的上帝！
+[04:04.75]是你把我们从尘土中高举
+[04:11.02]把我们从尘土中高举
+[04:17.10]说不尽你的慈爱
+[04:23.31]唱不尽你的公义
+[04:29.53]在这广阔的大地上
+[04:35.39]谁不感激赞美你！
+[04:41.90]在这广阔的大地上
+[04:48.03]谁不感激赞美你！
+
+`
+                }
+            }),
+            new ePlayer({
+                element: document.getElementById('eplayer12'),
+                music: {
+                    title: '我家乃在天',
+                    author: 'eBible Fellowship -Hymns',
+                    url: 'Hymns/我家乃在天.mp4',
+                    cover: 'https://cdn.prod.website-files.com/5cf040785de32135f9371ad2/5ffa5cef27d340ef0dff7cb8_5e62997cb6815f2d771c71a9_E%20Bible%20Fellowship%20Hymn-p-500.png',
+                    lrc: `[00:00.00]我家乃在天
+[00:03.86]YouTube收录
+[00:05.60]eBible Fellowship- Hymns
+[00:09.12]我昔日心贪爱 属世千百福
+[00:17.56]甘行入迷路中 做罪恶奴仆
+[00:26.20]幸耶稣来释放 美哉 恩无边
+[00:34.48]引导我 回天家 我家乃在天
+[00:42.88]我家乃在天 我家乃在天.
+[00:51.88]暂居此为客旅 我家乃在天.
+[01:00.55]蒙耶稣拯救我 赏赐大恩惠
+[01:08.85]差圣灵感化我 帮助又安慰
+[01:17.53]主教训最纯全 应许也确坚
+[01:26.05]带领我回家乡 我家乃在天
+[01:34.57]我家乃在天 我家乃在.天
+[01:43.68]暂居此为客旅 我家乃在.天
+[01:52.52]虽暂在这旷野 路途很难行
+[02:00.85]但靠主大能手 欢然奔天城
+[02:09.53]忘背后 望标杆 努力直向前
+[02:17.92]今快到我家乡 我家乃在天
+[02:26.65]我家乃在天 我家乃.在天
+[02:35.58]暂居此为客旅 我家乃在天
+`
+                }
+            }),
+        ];
+    </script>
+</body>
+</html>
+
+</body>
+</html>

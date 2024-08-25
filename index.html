@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>eBible Fellowship</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/11efaeb501.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="nb.css">
+<style>
+ .text-art {
+            font-family: 'Arial', sans-serif;
+            font-size: 4em;
+            font-weight: bold;
+            color: #f1c40f; /* 黄色 */
+            text-shadow: 3px 3px 0 #f39c12, -1px -1px 0 #f1c40f, 1px -1px 0 #f1c40f, -1px 1px 0 #f1c40f, 1px 1px 0 #f1c40f;
+            text-decoration: none;
+        }
+        .center-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70px;
+            text-align: center;
+        }
+        .text-art:hover {
+            color: #f39c12; /* 深黄色 */
+            text-shadow: 3px 3px 0 #e67e22, -1px -1px 0 #f39c12, 1px -1px 0 #f39c12, -1px 1px 0 #f39c12, 1px 1px 0 #f39c12;
+        }
+        .blue-text {
+            font-family: 'Georgia', serif;
+            font-size: 3em;
+            font-weight: bold;
+            color: #34aeff; /* 蓝色 */
+            text-shadow: 2px 2px 0 #2980b9, -1px -1px 0 #3498db, 1px -1px 0 #3498db, -1px 1px 0 #3498db, 1px 1px 0 #3498db;
+            text-decoration: none;
+        }
+        .blue-text:hover {
+            color: #0099ff; /* 深蓝色 */
+            text-shadow: 2px 2px 0 #1f77d0, -1px -1px 0 #2980b9, 1px -1px 0 #2980b9, -1px 1px 0 #2980b9, 1px 1px 0 #2980b9;
+        }
+        .center-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70px;
+            text-align: center;
+        }
+</style>
+
+<div class="title">
+  <img src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/62d89d87c1ef5c80d7431d14_EBF%20Logo.png" alt="eBible Fellowship Logo" class="l"style="width: 80px;height:auto">
+  <span style="color: rgb(41, 152, 255);">e</span> Bible Fellowship
+</div>
+<div class="date">
+      <div class="icon-container">
+        <a href="https://cnebiblefellowship-github-io.pages.dev/learnbible.html" class="icon-item">
+          <i class="fas fa-graduation-cap"></i>
+          <span>圣经学习</span>
+        </a>
+        <a href="https://cnebiblefellowship-github-io.pages.dev/lib.html" class="icon-item">
+          <i class="fas fa-book-open"></i>
+          <span>圣经书籍</span>
+        </a>
+        <a href="https://cnebiblefellowship-github-io.pages.dev/hymns.html" class="icon-item">
+          <i class="fas fa-music"></i>
+          <span>音乐</span>
+        </a>
+        <a href="https://us02web.zoom.us/j/8721925979?pwd=aHpWQ0RBcCs2Um1NY1dXVFdrRDZOdz09" class="icon-item">
+          <i class="fas fa-video"></i>
+          <span>Zoom</span>
+        </a>
+      </div>
+      <div class="live-stream-container">
+        <iframe src="https://ebiblefellowshipcn.airtime.pro/embed/player?stream=auto&amp;skin=2" frameborder="0" width="100%" height="300PX"></iframe>
+      </div>
+</div>
+</head>
+<body>
+  <div class="sidebar">
+    <img src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/62d89d87c1ef5c80d7431d14_EBF%20Logo.png" alt="eBible Fellowship Logo" class="logo">
+    <div class="title">
+     
+      <span style="color: rgb(41, 152, 255);">e</span> Bible Fellowship
+    </div>
+    <div class="date">
+      自2011年5月21日选民生活在审判日里
+    </div>
+    
+    <!-- 按钮列表 -->
+    <button class="nav-button" onclick="location.href='https://cnebiblefellowship-github-io.pages.dev/'">
+      <i class="fas fa-home"></i> 首页
+    </button>
+    <button class="nav-button" onclick="location.href='https://us02web.zoom.us/j/8721925979?pwd=aHpWQ0RBcCs2Um1NY1dXVFdrRDZOdz09'">
+      <i class="fas fa-search"></i> Zoom
+    </button>
+    <button class="nav-button" onclick="location.href='https://cnebiblefellowship-github-io.pages.dev/learnbible.html'">
+      <i class="fas fa-book-open"></i> 学习圣经
+    </button>
+    <button class="nav-button" onclick="location.href='https://newopenforum.org'">
+      <i class="fas fa-comments"></i> 圣经论坛
+    </button>
+    <button class="nav-button" onclick="location.href='https://cnebiblefellowship-github-io.pages.dev/lib.html'">
+      <i class="fas fa-book"></i> 圣经书籍
+    </button>
+    <!-- 直播室嵌入 -->
+    <div class="live-stream">
+      <iframe src="https://ebiblefellowshipcn.airtime.pro/embed/player?stream=auto&amp;skin=2" frameborder="0" width="200PX" height="300PX"></iframe>
+    </div>
+  
+    <!-- 平台图标 -->
+    <div class="platform-title">电子圣经团契平台</div>
+    <div class="icon-container">
+      <a href="#" class="icon-link"><i class="fab fa-youtube"></i></a>
+      <a href="#" class="icon-link"><i class="fab fa-facebook"></i></a>
+      <a href="#" class="icon-link"><i class="fab fa-x-twitter"></i></a>
+      <a href="#" class="icon-link"><i class="fab fa-tiktok"></i></a>
+      <a href="#" class="icon-link"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="icon-link"><i class="fab fa-linkedin"></i></a>
+      <a href="#" class="icon-link"><i class="fab fa-reddit"></i></a>
+      <!-- 添加其他图标... -->
+    </div>
+  
+    <!-- 联系我们按钮 -->
+    <button class="contact-button" onclick="location.href='mailto:Info@eBibleFellowship.org'">
+      <i class="fas fa-envelope"></i> 联系我们
+    </button>
+  
+    <!-- 地址按钮 -->
+    <button class="address-button" onclick="location.href='https://www.google.com/maps/place/E+Bible+FellowshipP.O.+Box+1393,+Sharon+Hill,+PA+19079-0593+USA'">
+      <i class="fas fa-map-marker-alt"></i> 地址
+    </button>
+  
+    <!-- 联系我们信息 -->
+    <div class="contact-info">
+      Info@eBibleFellowship.org
+    </div>
+  
+    <!-- 地址信息 -->
+    <div class="address">
+      E Bible Fellowship<br>
+      P.O. Box 1393, Sharon Hill, PA 19079-0593 USA
+    </div>
+  
+    <!-- 版权声明 -->
+    <div class="copyright">
+      &copy; 2024 eBible Fellowship
+    </div>
+  </div>
+<div class="image-container">
+  <a href="https://us02web.zoom.us/j/8721925979?pwd=aHpWQ0RBcCs2Um1NY1dXVFdrRDZOdz09#success">
+    <img src="https://cdn.prod.website-files.com/5cf040785de32119f9371abf/662e6f4511b4e4361cb0936c_Join4.png" alt="Join Us" class="circular-image">
+  </a>
+  </div>
+  </div>
+  <div class="center-container">
+    <a href="https://newopenforum.org" class="blue-text" target="_blank">电子圣经团契 圣经论坛</a>
+</div>
+  <div class="center-container">
+    <a href="https://newopenforum.org" class="text-art" target="_blank">NEWOPENFORUM.ORG</a>
+</div>
+
+  </div>
+  <hr class="separator"> 
+  <div class="book-section">
+    <div class="book-title">
+      电子圣经团契书籍
+    </div>
+    <img src="https://chineseebf.github.io/static/picture/5d0026e6ed749a1b7cbbf2f0_types%20figures.png" alt="电子圣经团契书籍封面" class="book-image">
+    <div class="book-title-divider"></div>
+    <div class="book-subject">
+      罗马书1章查考
+    </div>
+    <div class="button-container">
+      <a href="s/罗马书1章圣经查考(加密).pdf" class="book-button">下载</a>
+      <a href="s/roman1.html" class="book-button">阅读</a>
+    </div>
+  </div>
+  <hr class="separator">
+  <div class="book-section">
+    <div class="book-title">
+      圣经传单
+    </div>
+    <img src="https://chineseebf.github.io/static/picture/5d0026e6ed749a1b7cbbf2f0_types%20figures.png" alt="电子圣经团契书籍封面" class="book-image">
+    <div class="book-title-divider"></div>
+    <div class="book-subject">
+      为何世界如此自相纷争
+    </div>
+    <div class="button-container">
+      <a href="s/1_2019_05_26_ebible_world_divided_tract_cn.docx.pdf" class="book-button">下载</a>
+      <a href="s/1_2019_05_26_ebible_world_divided_tract_cn.docx.html" class="book-button">阅读</a>
+    </div>
+  </div>
+  <hr class="separator">
+  <div class="timeline-section">
+    <div class="title">
+      圣经历史年代表
+    </div>
+    <div class="subtitle">
+      看看圣经中发现的历史时间表，从创造的日期到时间的终结
+    </div>
+    <div class="subtitle">
+      由已故的哈罗德·坎平（Harold Camping）发现，正如上帝允许的那样，在末世时解开他的话语。这个交互式图表将显示关键的圣经事件...
+    </div>
+    <div class="interactive-timeline">
+      <!-- 编号的框示例，实际应用中应根据需要编号 -->
+  
+      <a href="biblicaltimeline.html" class="enter-interface-link">
+        进入界面<i class="fas fa-arrow-right"></i> <!-- 箭头图标 -->
+      </a>
+      <!-- 继续添加更多事件 -->
+    </div>
+  </div>
+  <hr class="separator">
+  <div class="white-interface">
+    <div class="title">喂养我的羊</div>
+    <div class="subtitle">2011年5月21日之后</div>
+    <div class="subtitle">
+      <p>eBibleFellowship 继续前往各个国家进行国际旅行，以遵循上帝的命令，"喂养我的羊"，并传讲圣经中出现的所有新教导。</p>
+    </div>
+  </div>
+  
+  <style>
+    .timeline-section,
+    .white-interface {
+      text-align: center;
+    }
+    
+    .title,
+    .subtitle,
+    .interactive-timeline,
+    .enter-interface-link {
+      margin: 0 auto;
+      max-width: 800px; /* 或者其他适合的宽度 */
+    }
+    
+    .subtitle p {
+      text-align: center;
+    }
+  </style>
+  <hr class="separator">
+  <div class="title">
+    <span style="color: rgb(0, 0, 0);">欢迎来到</span> 
+    <span style="color: rgb(41, 152, 255);">电子</span> 圣经团契
+        <style>
+            .container {
+                width: 80%;
+                margin: auto;
+                overflow: hidden;
+            }
+            .section {
+                background-color: #fff;
+                padding: 20px;
+                margin-bottom: 20px;
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+            .section-title {
+                font-size: 24px;
+                margin-bottom: 10px;
+                color: #007bff;
+            }
+            .h6 {
+                font-size: 30px;
+                margin-bottom: 10px;
+                color: #007bff;
+            }
+            .paragraph {
+                margin-bottom: 15px;
+            }
+            .verse {
+                font-style: italic;
+                margin: 10px 0;
+            }
+            .verse:before {
+                content: open-quote;
+            }
+            .verse:after {
+                content: close-quote;
+            }
+            .bold {
+                font-weight: bold;
+            }
+            .bold-text-75 {
+    outline-offset: 0px;
+    color: #08f;
+    -webkit-text-stroke-width: 0px;
+    -webkit-text-stroke-color: #08f;
+    outline: 0 #08f;
+    font-size: 20px;
+    font-weight: 900;
+    display: block;
+}
+@media screen and (min-width: 1280px) {
+    .bold-text-75, .bold-text-76, .bold-text-77 {
+        font-weight: 900;
+    }
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.site-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    width: 80%;
+    margin: auto;
+}
+
+.footer-content p,
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.footer-links a {
+    margin-right: 10px;
+}
+
+.social-icons {
+    padding: 10px 0;
+}
+
+.social-icon {
+    color: #fff;
+    margin: 0 5px;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #4caf50;
+}
+    /* 之前的样式 */
+
+        /* 模态框样式 */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 300px;
+            text-align: center;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .qr-code {
+            width: 200px;
+            height: 200px;
+            margin: 10px auto;
+            background-color: #f0f0f0; /* 占位背景色 */
+        }
+        </style>
+    </head>
+    <body>
+      <div class="div-block-445">
+        <h1 class="aboutheader" _msttexthash="9552686" _msthash="1261">关于我们</h1>
+        <p class="paragraph-105">
+          <br>
+          <font _mstmutation="1" _msttexthash="79508481" _msthash="1262">
+            <em class="italic-text-26" _mstmutation="1" _istranslated="1">E Bible Fellowship 的命名原因如下：</em>
+            <br _mstmutation="1" _istranslated="1">
+          </font>
+          <strong class="bold-text-75" _msttexthash="17201119" _msthash="1263">电子的：</strong>
+          <font _mstmutation="1" _msttexthash="16103483305" _msthash="1264">我们相信，主以一种巨大的方式使用电子媒介
+            <br _mstmutation="1" _istranslated="1">（无线电、互联网等）来拯救世界上教会和会众之外的许多人。现在
+            <br _mstmutation="1" _istranslated="1">手头的任务是，“喂养祂的羊”，使所有神拯救的人都能得到福音的启发。
+            <strong class="bold-text-75" _mstmutation="1" _istranslated="1">圣经：</strong>
+            <br _mstmutation="1" _istranslated="1">圣经是我们的权威。任何人的忏悔、信条、任何形式的教义陈述都
+            <br _mstmutation="1" _istranslated="1">不能凌驾于圣经之上。我们生活在一个圣经被上帝高度高举的时代。神的话语在它所宣
+            <br _mstmutation="1" _istranslated="1">告的一切中都是至高无上的。
+            <strong class="bold-text-75" _mstmutation="1" _istranslated="1">团契：</strong>我们是信徒的团契，
+            <br _mstmutation="1" _istranslated="1"> 他们的愿望是通过他的话语与上帝相交。圣经教导我们，教会时代
+            <br _mstmutation="1" _istranslated="1">已经结束;因此，我们与任何教会或教派没有任何隶属关系或认同。感谢您的光临。
+            <br _mstmutation="1" _istranslated="1">约翰一书 1：3 我们将所看见，所听见的，传给你们，使你们与我们相交。
+            <br _mstmutation="1" _istranslated="1">，我们乃是与父并他儿子耶稣基督相交的。
+          </font>
+        </p>
+      </div>
+    </body>
+    </html>
+    <div class="contact-section">
+      <h2 class="form-title">联系我们</h2>
+      <form class="contact-form">
+        <div class="form-group">
+          <label for="name">名字:</label>
+          <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">E-MAIL地址:</label>
+          <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">消息:</label>
+          <textarea id="message" name="message" rows="4" placeholder="Write a Message" required></textarea>
+        </div>
+        <button type="submit" class="submit-button">Submit</button>
+      </form>
+      <p id="message-sent" class="message-sent" style="display: none;">您的信息已发出</p>
+    </div>
+    <script>document.querySelector('.contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      var messageSent = document.getElementById("message-sent");
+      messageSent.style.display = 'block'; // 显示“您的信息已发出”提示
+      // 这里可以添加发送邮件的逻辑
+      // ...
+    });</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E Bible Fellowship</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        /* 在这里添加CSS样式 */
+    </style>
+</head>
+<body>
+    <!-- 页面主要内容 -->
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy;️ 2024 E Bible Fellowship</p>
+            <div class="footer-links">
+                <a href="learnbible.html">圣经学习</a>
+                <a href="lib.html">书籍</a>
+                <a href="hymns.html">音乐</a>
+                <a href="https://newopenforum.org" class="footer-forum">圣经论坛</a>
+            </div>
+            <div class="social-icons">
+                <footer class="site-footer">
+                  <div class="footer-content">
+                      <!-- 社交媒体图标 -->
+                      <div class="social-icons">
+                        <a href="#" class="social-icon" onclick="showQRCode(event)" title="QQ"><i class="fab fa-qq"></i></a>
+                          <a href="https://www.facebook.com/ebiblefellowship/" class="social-icon" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                          <a href="https://www.bing.com/ck/a?!&&p=0059473aaeeae321JmltdHM9MTcyNDExMjAwMCZpZ3VpZD0wYTUzODU5NC01ODJhLTYxNmMtMWEyZC05MTQ4NTliODYwYmImaW5zaWQ9NTE5OQ&ptn=3&ver=2&hsh=3&fclid=0a538594-582a-616c-1a2d-914859b860bb&psq=ebiblefellowship+tiktok&u=a1aHR0cHM6Ly93d3cudGlrdG9rLmNvbS9AZWJpYmxlZmVsbG93c2hpcA&ntb=1" class="social-icon" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                          <a href="https://www.bing.com/ck/a?!&&p=4bc4216c758d252dJmltdHM9MTcyNDExMjAwMCZpZ3VpZD0wYTUzODU5NC01ODJhLTYxNmMtMWEyZC05MTQ4NTliODYwYmImaW5zaWQ9NTIwOQ&ptn=3&ver=2&hsh=3&fclid=0a538594-582a-616c-1a2d-914859b860bb&psq=ebiblefellowship+YouTube&u=a1aHR0cHM6Ly93d3cueW91dHViZS5jb20vdXNlci9FQmlibGVGZWxsb3dzaGlwMQ&ntb=1" class="social-icon" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+                      </div>
+                      <!-- 版权声明 -->
+                      <p class="copyright">
+                        QQ群：153289064
+                          &copy;️ 2024 E Bible Fellowship. 版权所有
+                      </p>
+                      <p class="organization-name">
+                          电子圣经团契
+                      </p>
+                  </div>
+              </footer>
+            </div>
+            <div id="qrModal" class="modal">
+              <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <h2>中国大陆请扫描二维码</h2>
+                  <div class="qr-code">
+
+                      <!-- 这里放置实际的QR码图片 -->
+                      <img src="s/qq.png" alt="QQ群二维码" style="width:100%; height:100%;">
+                  </div>
+              </div>
+          </div>
+      
+          <script>
+              // 显示QR码的函数
+              function showQRCode(event) {
+                  event.preventDefault();
+                  document.getElementById('qrModal').style.display = 'block';
+              }
+      
+              // 关闭模态框
+              var modal = document.getElementById('qrModal');
+              var span = document.getElementsByClassName("close")[0];
+              span.onclick = function() {
+                  modal.style.display = "none";
+              }
+              window.onclick = function(event) {
+                  if (event.target == modal) {
+                      modal.style.display = "none";
+                  }
+              }
+          </script>
+        </div>
+    </footer>
+</body>
+</html>
+</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>电子圣经团契导航</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #aedbff;
+        }
+        .content {
+            margin-right: 250px;
+            padding: 20px;
+            transition: margin-right 0.3s;
+        }
+        .right-nav {
+            width: 300px;
+            position: fixed;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-color: #e6f3ff;
+            overflow-y: auto;
+            padding: 20px;
+            box-sizing: border-box;
+            box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+            transition: right 0.3s;
+        }
+        .right-nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .right-nav li {
+            margin-bottom: 15px;
+        }
+        .right-nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 24px;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+        }
+        .right-nav a:hover {
+            color: #007bff;
+        }
+        .right-nav i {
+            margin-right: 10px;
+            width: 20px;
+            text-align: center;
+        }
+        .nav-toggle {
+            display: none;
+            position: fixed;
+            right: 20px;
+            top: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            z-index: 1000;
+            border-radius: 5px;
+        }
+        .language-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .language-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 120px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            right: 100%;
+            top: 0;
+        }
+        .language-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .language-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .language-dropdown:hover .language-content {
+            display: block;
+        }
+        @media (max-width: 768px) {
+            .content {
+                margin-right: 0;
+            }
+            .right-nav {
+                right: -110px;
+            }
+            .nav-toggle {
+                display: block;
+            }
+            .right-nav.active {
+                right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="nav-toggle" onclick="toggleNav()">
+        <span id="toggleIcon">☰</span>
+    </button>
+    
+    <nav class="right-nav" id="rightNav">
+        <ul>
+            <li>
+                <div class="language-dropdown">
+                    <a href="#"><i class="fa-solid fa-earth-asia"></i>语言</a>
+                    <div class="language-content">
+                        <a href="" onclick="changeLanguage('zh')">中文</a>
+                        <a href="ebiblefellowship.org" onclick="changeLanguage('en')">English</a>
+                    </div>
+                </div>
+            </li>
+            <li><a href="https://cnebiblefellowship-github-io.pages.dev/bible-index"><i class="fa-solid fa-book-bible"></i> 圣经阅读</a></li>
+            <li><a href="https://cnebiblefellowship-github-io.pages.dev/audio-index"><i class="fa-solid fa-file-audio"></i>圣经朗读</a></li>
+            <li><a href="https://cnebiblefellowship-github-io.pages.dev/hymns.html"><i class="fa-solid fa-music"></i> 圣经音乐</a></li>
+            <li><a href="https://cnebiblefellowship-github-io.pages.dev/biblicaltimeline.html"><i class="fas fa-timeline"></i> 圣经历史年代表</a></li>
+            <li><a href="https://cnebiblefellowship-github-io.pages.dev/books.html"><i class="fa-solid fa-book"></i>圣经书籍</a></li>
+            <li><a href="https://cnebiblefellowship-github-io.pages.dev/pingtai.html"><i class="fa-solid fa-layer-group"></i>电子圣经团契平台</a></li>
+            <li><a href="https://newopenforum.org"><i class="fas fa-comments"></i> 开放论坛</a></li>
+            <li><a href="https://us02web.zoom.us/j/8721925979?pwd=aHpWQ0RBcCs2Um1NY1dXVFdrRDZOdz09#success"><i class="fas fa-video"></i> Zoom</a></li>
+            <li><a href="https://cnebiblefellowship-github-io.pages.dev/unsealed-teachings.html"><i class="fa-solid fa-scroll"></i> 封印的书卷</a></li>
+            <li><a href="https://cnebiblefellowship-github-io.pages.dev/download.html"><i class="fa-solid fa-circle-down"></i> 下载内容</a></li>
+            <li><a href="https://cnebiblefellowship-github-io.pages.dev/email.html"><i class="fa-solid fa-address-card"></i>联系我们</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        function toggleNav() {
+            var nav = document.getElementById("rightNav");
+            var icon = document.getElementById("toggleIcon");
+            nav.classList.toggle("active");
+            if (nav.classList.contains("active")) {
+                icon.innerHTML = "×";
+            } else {
+                icon.innerHTML = "☰";
+            }
+        }
+
+        function changeLanguage(lang) {
+            console.log("Language changed to: " + lang);
+            // 这里可以添加切换语言的逻辑
+        }
+    </script>
+</body>
+</html>
+</html>

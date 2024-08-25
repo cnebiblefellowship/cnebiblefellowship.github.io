@@ -1,0 +1,5 @@
+$folderPath = "C:\Users\liuhe\Desktop\新建文件夹\bible-reading"
+
+Get-ChildItem -Path $folderPath -Filter *.html | ForEach-Object {
+    Clear-Content -Path $_.FullName
+}
